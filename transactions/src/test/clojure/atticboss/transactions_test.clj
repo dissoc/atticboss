@@ -14,7 +14,7 @@
 
 (ns atticboss.transactions-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.atticboss Atticboss Options]
+  (:import [org.projectodd.atticboss AtticBoss Options]
            [org.projectodd.atticboss.caching Caching Caching$CreateOption]
            [org.projectodd.atticboss.transactions Transaction]
            [org.projectodd.atticboss.codecs Codecs None]
@@ -22,10 +22,10 @@
             Destination$ReceiveOption Destination$MessageOpOption
             Messaging$CreateContextOption Messaging$CreateQueueOption]))
 
-(def tx (doto (Atticboss/findOrCreateComponent Transaction) (.start)))
-(def msg (doto (Atticboss/findOrCreateComponent Messaging) (.start)))
+(def tx (doto (AtticBoss/findOrCreateComponent Transaction) (.start)))
+(def msg (doto (AtticBoss/findOrCreateComponent Messaging) (.start)))
 
-(def cache (let [service (doto (Atticboss/findOrCreateComponent Caching) (.start))
+(def cache (let [service (doto (AtticBoss/findOrCreateComponent Caching) (.start))
                  options (Options. {Caching$CreateOption/TRANSACTIONAL true})]
              (.findOrCreate service "tx-test" options)))
 

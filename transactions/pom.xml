@@ -60,7 +60,7 @@
 
     <dependency>
       <groupId>org.projectodd.atticboss</groupId>
-      <artifactId>atticboss-messaging-hornetq</artifactId>
+      <artifactId>atticboss-messaging-artemis</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
