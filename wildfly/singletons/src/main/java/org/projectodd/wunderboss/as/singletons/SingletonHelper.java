@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.singletons;
+package org.projectodd.atticboss.as.singletons;
 
 import org.jboss.as.server.ServerEnvironment;
 import org.jboss.as.server.ServerEnvironmentService;
@@ -26,9 +26,9 @@ import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
 import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.value.InjectedValue;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.ASUtils;
-import org.projectodd.wunderboss.as.ModuleUtils;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.ASUtils;
+import org.projectodd.atticboss.as.ModuleUtils;
 import org.wildfly.clustering.singleton.SingletonElectionPolicy;
 import org.wildfly.clustering.singleton.SingletonServiceBuilderFactory;
 
@@ -40,14 +40,14 @@ public class SingletonHelper {
             { ServiceName.parse("jboss.clustering.singleton.builder.server.default"), // WF8,9
               ServiceName.parse("jboss.clustering.singleton.server.default") };       // WF10
 
-    private static final ServiceName SINGLETON_NAME = ServiceName.of("wunderboss", "singleton");
+    private static final ServiceName SINGLETON_NAME = ServiceName.of("atticboss", "singleton");
 
     //TODO: expose election policy, quorum?
     public static void installSingleton(final ServiceRegistry registry,
                                         final ServiceTarget target,
                                         final Service service,
                                         final String name) {
-        final String deploymentName = (String)WunderBoss.options().get("deployment-name");
+        final String deploymentName = (String)AtticBoss.options().get("deployment-name");
         final ServiceName serviceName = SINGLETON_NAME.append(deploymentName).append(name);
         if (ASUtils.containerIsEAP6()) {
             installEAPSingleton(registry, target, service, serviceName);

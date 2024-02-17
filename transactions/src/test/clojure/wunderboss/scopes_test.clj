@@ -12,16 +12,16 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
-(ns wunderboss.scopes-test
+(ns atticboss.scopes-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.wunderboss WunderBoss Options]
-           [org.projectodd.wunderboss.caching Caching Caching$CreateOption]
-           [org.projectodd.wunderboss.transactions Transaction]))
+  (:import [org.projectodd.atticboss Atticboss Options]
+           [org.projectodd.atticboss.caching Caching Caching$CreateOption]
+           [org.projectodd.atticboss.transactions Transaction]))
 
-(def tx (doto (WunderBoss/findOrCreateComponent Transaction) (.start)))
+(def tx (doto (Atticboss/findOrCreateComponent Transaction) (.start)))
 
 ;;; Create a cache for testing transactional scope behavior
-(def cache (let [service (doto (WunderBoss/findOrCreateComponent Caching) (.start))
+(def cache (let [service (doto (Atticboss/findOrCreateComponent Caching) (.start))
                  options (Options. {Caching$CreateOption/TRANSACTIONAL true})]
              (.findOrCreate service "tx-test" options)))
 

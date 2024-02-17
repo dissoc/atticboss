@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async;
+package org.projectodd.atticboss.web.async;
 
 public interface HttpChannel extends Channel {
     boolean sendStarted();

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.ruby;
+package org.projectodd.atticboss.ruby;
 
-import org.projectodd.wunderboss.Language;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.Language;
+import org.projectodd.atticboss.AtticBoss;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -54,7 +54,7 @@ public class RubyLanguageShim implements Language {
     }
 
     protected String extractedRoot() {
-        return WunderBoss.options().getString("extract-root", ".");
+        return AtticBoss.options().getString("extract-root", ".");
     }
 
     protected Language ruby() {
@@ -63,16 +63,16 @@ public class RubyLanguageShim implements Language {
                 String jrubyHome = locateJRubyHome();
                 File jrubyLib = new File(jrubyHome + "/lib");
                 if (jrubyLib.isDirectory()) {
-                    WunderBoss.putOption("jruby-home", jrubyHome);
+                    AtticBoss.putOption("jruby-home", jrubyHome);
                     for (File each : jrubyLib.listFiles(JAR_FILTER)) {
-                        WunderBoss.updateClassPath(each.toURI().toURL());
+                        AtticBoss.updateClassPath(each.toURI().toURL());
                     }
                 }
 
                 checkForJRuby();
 
-                Class<?> rubyLanguageClass = Class.forName("org.projectodd.wunderboss.ruby.RubyLanguage",
-                        true, WunderBoss.classLoader());
+                Class<?> rubyLanguageClass = Class.forName("org.projectodd.atticboss.ruby.RubyLanguage",
+                        true, AtticBoss.classLoader());
                 rubyLanguage = (Language) rubyLanguageClass.newInstance();
                 rubyLanguage.initialize();
             } catch (ClassNotFoundException |
@@ -87,7 +87,7 @@ public class RubyLanguageShim implements Language {
 
     protected void checkForJRuby() {
         try {
-            Class.forName("org.jruby.Ruby", false, WunderBoss.classLoader());
+            Class.forName("org.jruby.Ruby", false, AtticBoss.classLoader());
         } catch (ClassNotFoundException e) {
             throw new IllegalStateException("No JRuby found - either include JRuby in the artifact, " +
                     "set the JRUBY_HOME envvar, or set the jruby.home sysprop.");

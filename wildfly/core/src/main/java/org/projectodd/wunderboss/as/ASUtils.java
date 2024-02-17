@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as;
+package org.projectodd.atticboss.as;
 
 import org.jboss.logging.Logger;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.AtticBoss;
 
 import javax.management.MBeanException;
 import javax.management.MBeanServer;
@@ -44,7 +44,7 @@ public class ASUtils {
     public static boolean inCluster() {
         if (inCluster == null) {
             //look for a jgroups stack to see if we are clustered
-            ServiceRegistry registry = (ServiceRegistry) WunderBoss.options().get("service-registry");
+            ServiceRegistry registry = (ServiceRegistry) AtticBoss.options().get("service-registry");
             if (registry != null) {
                 for (ServiceName each : JGROUPS_FACTORY_NAMES) {
                     if (registry.getService(each) != null) {
@@ -235,7 +235,7 @@ public class ASUtils {
         return removed;
     }
 
-    private static final Logger log = Logger.getLogger("org.projectodd.wunderboss.as");
+    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.as");
 
     static {
         final String swarmVersion = System.getProperty("wildfly.swarm.version");

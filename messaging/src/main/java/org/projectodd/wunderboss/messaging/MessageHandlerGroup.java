@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging;
+package org.projectodd.atticboss.messaging;
 
 import org.jboss.logging.Logger;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.codecs.Codecs;
-import org.projectodd.wunderboss.messaging.Destination.ListenOption;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.codecs.Codecs;
+import org.projectodd.atticboss.messaging.Destination.ListenOption;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,5 +80,5 @@ public abstract class MessageHandlerGroup implements Listener {
     private final List<Listener> listeners = new ArrayList<>();
     private boolean started = false;
 
-    private static final Logger log = Logger.getLogger("org.projectodd.wunderboss.messaging");
+    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.messaging");
 }

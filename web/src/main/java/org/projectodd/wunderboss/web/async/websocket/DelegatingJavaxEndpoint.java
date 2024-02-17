@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async.websocket;
+package org.projectodd.atticboss.web.async.websocket;
 
 import javax.websocket.CloseReason;
 import javax.websocket.Endpoint;
@@ -69,7 +69,7 @@ public class DelegatingJavaxEndpoint extends Endpoint {
             this.delegate = delegateTL.get();
             delegateTL.remove();
         }
-        
+
         return this.delegate;
     }
 

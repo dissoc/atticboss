@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.caching;
+package org.projectodd.atticboss.caching;
 
 import org.infinispan.Cache;
 import org.infinispan.AbstractDelegatingCache;
@@ -195,7 +195,7 @@ public class KeyEquivalenceCache extends AbstractDelegatingCache {
             return this.key;
         }
         public boolean equals(Object obj) {
-            return obj instanceof KeyWrapper ? 
+            return obj instanceof KeyWrapper ?
                 obj.equals(key) :
                 equiv.equals(obj, key);
         }

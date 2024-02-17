@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.ruby;
+package org.projectodd.atticboss.ruby;
 
 import org.jruby.Ruby;
 import org.jruby.RubyInstanceConfig;
 import org.jruby.runtime.builtin.IRubyObject;
-import org.projectodd.wunderboss.Language;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.Language;
+import org.projectodd.atticboss.AtticBoss;
 
 import java.io.File;
 
@@ -33,7 +33,7 @@ public class RubyLanguage implements Language {
     @Override
     public synchronized Ruby runtime() {
         if (this.runtime == null) {
-            String root = WunderBoss.options().get("root", ".").toString();
+            String root = AtticBoss.options().get("root", ".").toString();
             this.runtime = createRuntime(root);
             String expandedRoot = this.runtime.evalScriptlet("File.expand_path(%q(" + root + "))").asJavaString();
             this.runtime.setCurrentDirectory(expandedRoot);
@@ -70,11 +70,11 @@ public class RubyLanguage implements Language {
             runtime = Ruby.getGlobalRuntime();
         } else {
             RubyInstanceConfig instanceConfig = new RubyInstanceConfig();
-            String jrubyHome = WunderBoss.options().get("jruby-home", "").toString();
+            String jrubyHome = AtticBoss.options().get("jruby-home", "").toString();
             if (!jrubyHome.isEmpty()) {
                 instanceConfig.setJRubyHome(jrubyHome);
             }
-            String[] argv = (String[]) WunderBoss.options().get("argv", new String[]{});
+            String[] argv = (String[]) AtticBoss.options().get("argv", new String[]{});
             instanceConfig.setArgv(argv);
             instanceConfig.setLoader(this.getClass().getClassLoader());
             runtime = Ruby.newInstance(instanceConfig);

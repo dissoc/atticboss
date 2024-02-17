@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.singletons;
+package org.projectodd.atticboss.as.singletons;
 
 import org.jboss.msc.service.Service;
 import org.jboss.msc.service.ServiceRegistry;
 import org.jboss.msc.service.ServiceTarget;
-import org.projectodd.wunderboss.as.ASUtils;
-import org.projectodd.wunderboss.ec.AlwaysMasterClusterParticipant;
-import org.projectodd.wunderboss.ec.ClusterParticipant;
+import org.projectodd.atticboss.as.ASUtils;
+import org.projectodd.atticboss.ec.AlwaysMasterClusterParticipant;
+import org.projectodd.atticboss.ec.ClusterParticipant;
 
-public class DaemonContextProvider extends org.projectodd.wunderboss.ec.DaemonContextProvider {
+public class DaemonContextProvider extends org.projectodd.atticboss.ec.DaemonContextProvider {
     public DaemonContextProvider(final ServiceRegistry registry, final ServiceTarget target) {
         this.registry = registry;
         this.target = target;

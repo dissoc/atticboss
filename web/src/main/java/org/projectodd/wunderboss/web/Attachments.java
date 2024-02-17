@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web;
+package org.projectodd.atticboss.web;
 
 public interface Attachments {
     void attach(Object key, Object value);

@@ -3,31 +3,31 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.projectodd.wunderboss</groupId>
-  <artifactId>wunderboss</artifactId>
+  <groupId>org.projectodd.atticboss</groupId>
+  <artifactId>atticboss</artifactId>
   <version>0.13.2-SNAPSHOT</version>
-  <name>WunderBoss</name>
+  <name>AtticBoss</name>
 
   <packaging>pom</packaging>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+  <!-- <parent> -->
+  <!--   <groupId>org.sonatype.oss</groupId> -->
+  <!--   <artifactId>oss-parent</artifactId> -->
+  <!--   <version>7</version> -->
+  <!-- </parent> -->
 
-  <developers>
-    <developer>
-      <id>wunderboss-team</id>
-      <name>The WunderBoss Team</name>
-    </developer>
-  </developers>
+  <!-- <developers> -->
+  <!--   <developer> -->
+  <!--     <id>atticboss-team</id> -->
+  <!--     <name>The AtticBoss Team</name> -->
+  <!--   </developer> -->
+  <!-- </developers> -->
 
-  <scm>
-    <connection>scm:git:git@github.com:projectodd/wunderboss-release.git</connection>
-    <developerConnection>scm:git:git@github.com:projectodd/wunderboss-release.git</developerConnection>
-    <url>https://github.com/projectodd/wunderboss/</url>
-  </scm>
+  <!-- <scm> -->
+  <!--   <connection>scm:git:git@github.com:projectodd/atticboss-release.git</connection> -->
+  <!--   <developerConnection>scm:git:git@github.com:projectodd/atticboss-release.git</developerConnection> -->
+  <!--   <url>https://github.com/projectodd/atticboss/</url> -->
+  <!-- </scm> -->
 
   <licenses>
     <license>
@@ -40,19 +40,19 @@
   <modules>
     <module>core</module>
     <module>messaging</module>
-    <module>messaging-hornetq</module>
+    <!-- <module>messaging-hornetq</module> -->
     <module>scheduling</module>
     <module>caching</module>
-    <module>caching-ispan5</module>
-    <module>caching-ispan6</module>
-    <module>caching-ispan8</module>
-    <module>web</module>
-    <module>web-undertow</module>
-    <module>transactions</module>
-    <module>wildfly</module>
+    <!-- <module>caching-ispan5</module> -->
+    <!-- <module>caching-ispan6</module> -->
+    <!-- <module>caching-ispan8</module> -->
+    <!-- <module>web</module> -->
+    <!-- <module>web-undertow</module> -->
+    <!-- <module>transactions</module> -->
+    <!-- <module>wildfly</module> -->
 
-    <module>ruby</module>
-    <module>clojure</module>
+    <!-- <module>ruby</module> -->
+    <!-- <module>clojure</module> -->
   </modules>
 
   <properties>
@@ -67,7 +67,7 @@
     <repository>
       <id>clojars</id>
       <name>Clojure Jars</name>
-      <url>http://clojars.org/repo/</url>
+      <url>https://clojars.org/repo/</url>
     </repository>
   </repositories>
 
@@ -84,30 +84,30 @@
     </snapshotRepository>
   </distributionManagement>
 
-  <profiles>
-    <profile>
-      <id>bees</id>
-      <distributionManagement>
-        <snapshotRepository>
-          <id>bees-snapshots-repository-dav</id>
-          <url>dav:https://repository-projectodd.forge.cloudbees.com/snapshot/</url>
-        </snapshotRepository>
-        <repository>
-          <id>bees-incremental-repository-dav</id>
-          <url>dav:https://repository-projectodd.forge.cloudbees.com/incremental/</url>
-        </repository>
-      </distributionManagement>
-    </profile>
-    <profile>
-      <id>bees-release</id>
-      <distributionManagement>
-        <repository>
-          <id>bees-release-repository-dav</id>
-          <url>dav:https://repository-projectodd.forge.cloudbees.com/release/</url>
-        </repository>
-      </distributionManagement>
-    </profile>
-  </profiles>
+  <!-- <profiles> -->
+  <!--   <profile> -->
+  <!--     <id>bees</id> -->
+  <!--     <distributionManagement> -->
+  <!--       <snapshotRepository> -->
+  <!--         <id>bees-snapshots-repository-dav</id> -->
+  <!--         <url>dav:https://repository-projectodd.forge.cloudbees.com/snapshot/</url> -->
+  <!--       </snapshotRepository> -->
+  <!--       <repository> -->
+  <!--         <id>bees-incremental-repository-dav</id> -->
+  <!--         <url>dav:https://repository-projectodd.forge.cloudbees.com/incremental/</url> -->
+  <!--       </repository> -->
+  <!--     </distributionManagement> -->
+  <!--   </profile> -->
+  <!--   <profile> -->
+  <!--     <id>bees-release</id> -->
+  <!--     <distributionManagement> -->
+  <!--       <repository> -->
+  <!--         <id>bees-release-repository-dav</id> -->
+  <!--         <url>dav:https://repository-projectodd.forge.cloudbees.com/release/</url> -->
+  <!--       </repository> -->
+  <!--     </distributionManagement> -->
+  <!--   </profile> -->
+  <!-- </profiles> -->
 
   <dependencyManagement>
     <dependencies>
@@ -188,10 +188,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
+        <version>2.5.1</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
+
+
         </configuration>
       </plugin>
       <plugin>

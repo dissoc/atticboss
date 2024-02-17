@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
 import java.util.concurrent.Callable;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.caching;
+package org.projectodd.atticboss.caching;
 
 import org.infinispan.Cache;
 import org.infinispan.CacheSet;
@@ -29,7 +29,7 @@ import org.infinispan.distribution.ch.ConsistentHash;
 import org.infinispan.stream.impl.local.ValueCacheCollection;
 import org.infinispan.stream.impl.local.EntryStreamSupplier;
 import org.infinispan.stream.impl.local.LocalCacheStream;
-import org.projectodd.wunderboss.codecs.Codec;
+import org.projectodd.atticboss.codecs.Codec;
 import java.util.AbstractCollection;
 import java.util.function.Function;
 
@@ -47,7 +47,7 @@ public class CacheWithCodec8 extends CacheWithCodec {
 
     @Override
     public CacheSet entrySet() {
-        return new EncodedCache(super.entrySet(), 
+        return new EncodedCache(super.entrySet(),
                                 x -> {
                                     Entry e = (Entry) x;
                                     return new ImmortalCacheEntry(decode(e.getKey()),

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging;
+package org.projectodd.atticboss.messaging;
 
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.codecs.Codecs;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.codecs.Codecs;
 
 import java.util.HashMap;
 import java.util.Map;

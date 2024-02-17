@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging;
+package org.projectodd.atticboss.messaging;
 
 public interface HasCloseables {
     void addCloseable(Object closeable);

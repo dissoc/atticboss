@@ -12,11 +12,11 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
-(ns wunderboss.messaging-tests
+(ns atticboss.messaging-tests
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.wunderboss Option WunderBoss]
-           [org.projectodd.wunderboss.codecs Codecs None StringCodec]
-           [org.projectodd.wunderboss.messaging Messaging
+  (:import [org.projectodd.atticboss Option AtticBoss]
+           [org.projectodd.atticboss.codecs Codecs None StringCodec]
+           [org.projectodd.atticboss.messaging Messaging
             Context Context$Mode
             ConcreteReply
             Destination Destination$ListenOption Destination$ReceiveOption
@@ -28,7 +28,7 @@
             MessageHandler]
            java.util.concurrent.TimeUnit))
 
-(def default (doto (WunderBoss/findOrCreateComponent Messaging) (.start)))
+(def default (doto (AtticBoss/findOrCreateComponent Messaging) (.start)))
 
 (defn create-opts-fn [class]
   ;; clojure 1.7.0 no longer initializes classes on import, so we have

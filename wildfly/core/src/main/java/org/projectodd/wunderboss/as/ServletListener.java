@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as;
+package org.projectodd.atticboss.as;
 
 import org.jboss.logging.Logger;
 import org.jboss.modules.Module;
-import org.projectodd.wunderboss.ApplicationRunner;
-import org.projectodd.wunderboss.CompletableFuture;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.web.ServletWebProvider;
-import org.projectodd.wunderboss.web.Web;
+import org.projectodd.atticboss.ApplicationRunner;
+import org.projectodd.atticboss.CompletableFuture;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.web.ServletWebProvider;
+import org.projectodd.atticboss.web.Web;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -40,13 +40,13 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @WebListener
 public class ServletListener implements ServletContextListener {
-    public static final String TIMEOUT_PROPERTY = "wunderboss.deployment.timeout";
+    public static final String TIMEOUT_PROPERTY = "atticboss.deployment.timeout";
     public static final long DEFAULT_TIMEOUT_SECONDS = 240; // 4 minutes
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext sc = sce.getServletContext();
-        WunderBoss.putOption("servlet-context-path", sc.getContextPath());
+        AtticBoss.putOption("servlet-context-path", sc.getContextPath());
 
         /*
          We don't want to initialize the application on this thread, because if that hangs, we have
@@ -72,7 +72,7 @@ public class ServletListener implements ServletContextListener {
         final AtomicLong sharedTimeout = new AtomicLong(totalTimeout * 1000);
 
         try {
-            WunderBoss.registerComponentProvider(Web.class, new ServletWebProvider(sc, addServletActions, sharedTimeout));
+            AtticBoss.registerComponentProvider(Web.class, new ServletWebProvider(sc, addServletActions, sharedTimeout));
         } catch (LinkageError ignored) {
             // Ignore - perhaps the user isn't using our web
         }
@@ -82,7 +82,7 @@ public class ServletListener implements ServletContextListener {
             protected void updateClassPath() throws Exception {
                 super.updateClassPath();
                 // TODO: Is this still needed? Things seem to work with it commented out
-                ModuleUtils.addToModuleClasspath(Module.forClass(WunderBossService.class), classPathAdditions);
+                ModuleUtils.addToModuleClasspath(Module.forClass(AtticBossService.class), classPathAdditions);
             }
 
             @Override
@@ -109,7 +109,7 @@ public class ServletListener implements ServletContextListener {
             }
         };
 
-        WunderBoss.workerPool().submit(new Runnable() {
+        AtticBoss.workerPool().submit(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -161,9 +161,9 @@ public class ServletListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        log.debug("Stopping WunderBoss application");
+        log.debug("Stopping AtticBoss application");
         try {
-            WunderBoss.shutdownAndReset();
+            AtticBoss.shutdownAndReset();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -198,11 +198,11 @@ public class ServletListener implements ServletContextListener {
                 result = "/";
             }
         }
-        
+
         return result;
     }
 
     private ApplicationRunner applicationRunner;
 
-    private static final Logger log = Logger.getLogger("org.projectodd.wunderboss.wildfly");
+    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.wildfly");
 }

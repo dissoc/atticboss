@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging;
+package org.projectodd.atticboss.messaging;
 
-import org.projectodd.wunderboss.Option;
-import org.projectodd.wunderboss.codecs.Codec;
-import org.projectodd.wunderboss.codecs.Codecs;
+import org.projectodd.atticboss.Option;
+import org.projectodd.atticboss.codecs.Codec;
+import org.projectodd.atticboss.codecs.Codecs;
 
 import java.util.Map;
 

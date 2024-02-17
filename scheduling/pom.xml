@@ -2,26 +2,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
-    <groupId>org.projectodd.wunderboss</groupId>
-    <artifactId>wunderboss</artifactId>
+    <groupId>org.projectodd.atticboss</groupId>
+    <artifactId>atticboss</artifactId>
     <version>0.13.2-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>wunderboss-scheduling</artifactId>
-  <name>WunderBoss Scheduling Module</name>
+  <artifactId>atticboss-scheduling</artifactId>
+  <name>AtticBoss Scheduling Module</name>
 
   <packaging>jar</packaging>
 
   <properties>
-    <version.quartz-scheduler>2.2.1</version.quartz-scheduler>
+    <version.quartz-scheduler>2.3.2</version.quartz-scheduler>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-core</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-core</artifactId>
       <version>${project.version}</version>
     </dependency>
 

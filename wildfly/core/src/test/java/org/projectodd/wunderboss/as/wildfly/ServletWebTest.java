@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.wildfly;
+package org.projectodd.atticboss.as.wildfly;
 
 import org.junit.Test;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.web.ServletWeb;
-import org.projectodd.wunderboss.as.web.ServletWebProvider;
-import org.projectodd.wunderboss.web.Web;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.web.ServletWeb;
+import org.projectodd.atticboss.as.web.ServletWebProvider;
+import org.projectodd.atticboss.web.Web;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -29,8 +29,8 @@ public class ServletWebTest {
 
     @Test
     public void testCanFindWebComponent() {
-        WunderBoss.registerComponentProvider(Web.class, new ServletWebProvider(null, null, null));
-        Web web = WunderBoss.findOrCreateComponent(Web.class);
+        AtticBoss.registerComponentProvider(Web.class, new ServletWebProvider(null, null, null));
+        Web web = AtticBoss.findOrCreateComponent(Web.class);
         assertNotNull(web);
         assertTrue(web instanceof ServletWeb);
     }

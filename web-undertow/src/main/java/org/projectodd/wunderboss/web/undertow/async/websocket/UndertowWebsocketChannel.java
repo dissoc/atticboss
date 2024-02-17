@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.undertow.async.websocket;
+package org.projectodd.atticboss.web.undertow.async.websocket;
 
 
 import io.undertow.websockets.core.CloseMessage;
@@ -22,8 +22,8 @@ import io.undertow.websockets.core.WebSocketCallback;
 import io.undertow.websockets.core.WebSocketChannel;
 import io.undertow.websockets.core.WebSockets;
 import io.undertow.websockets.spi.WebSocketHttpExchange;
-import org.projectodd.wunderboss.web.async.WebsocketUtil;
-import org.projectodd.wunderboss.web.async.websocket.WebsocketChannelSkeleton;
+import org.projectodd.atticboss.web.async.WebsocketUtil;
+import org.projectodd.atticboss.web.async.websocket.WebsocketChannelSkeleton;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

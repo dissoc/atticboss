@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.undertow.async;
+package org.projectodd.atticboss.web.undertow.async;
 
 import io.undertow.server.HttpServerExchange;
 import io.undertow.server.ServerConnection;
 import io.undertow.util.Methods;
-import org.projectodd.wunderboss.web.async.OutputStreamHttpChannel;
+import org.projectodd.atticboss.web.async.OutputStreamHttpChannel;
 import org.xnio.XnioExecutor;
 
 import java.io.IOException;

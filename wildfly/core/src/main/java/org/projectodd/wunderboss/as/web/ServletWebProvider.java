@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.web;
+package org.projectodd.atticboss.as.web;
 
-import org.projectodd.wunderboss.ComponentProvider;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.as.ActionConduit;
-import org.projectodd.wunderboss.as.web.ServletWeb;
-import org.projectodd.wunderboss.web.Web;
+import org.projectodd.atticboss.ComponentProvider;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.as.ActionConduit;
+import org.projectodd.atticboss.as.web.ServletWeb;
+import org.projectodd.atticboss.web.Web;
 
 import javax.servlet.ServletContext;
 import java.util.concurrent.atomic.AtomicLong;

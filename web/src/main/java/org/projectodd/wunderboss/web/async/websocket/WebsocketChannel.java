@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async.websocket;
+package org.projectodd.atticboss.web.async.websocket;
 
-import org.projectodd.wunderboss.web.async.Channel;
+import org.projectodd.atticboss.web.async.Channel;
 
 public interface WebsocketChannel extends Channel {
     Object endpoint();

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.caching;
+package org.projectodd.atticboss.caching;
 
 import org.infinispan.Cache;
-import org.projectodd.wunderboss.codecs.Codec;
+import org.projectodd.atticboss.codecs.Codec;
 import java.util.Collection;
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.Set;

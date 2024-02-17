@@ -12,15 +12,15 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
-(ns wunderboss.caching-test
+(ns atticboss.caching-test
   (:require [clojure.test :refer :all])
-  (:import org.projectodd.wunderboss.WunderBoss
-           [org.projectodd.wunderboss.caching Caching Caching$CreateOption Config]
-           org.projectodd.wunderboss.Options
+  (:import org.projectodd.atticboss.Atticboss
+           [org.projectodd.atticboss.caching Caching Caching$CreateOption Config]
+           org.projectodd.atticboss.Options
            org.infinispan.configuration.cache.CacheMode
            java.util.Arrays))
 
-(def default (doto (WunderBoss/findOrCreateComponent Caching) (.start)))
+(def default (doto (AtticBoss/findOrCreateComponent Caching) (.start)))
 
 (deftest byte-array-keys
   (let [c (.findOrCreate default "bytes" (Options.))
@@ -35,4 +35,3 @@
         c (.findOrCreate default "repl" options)]
     (is (= CacheMode/REPL_SYNC (.. config clustering cacheMode)))
     (is (= CacheMode/LOCAL (.. c getCacheConfiguration clustering cacheMode)))))
-

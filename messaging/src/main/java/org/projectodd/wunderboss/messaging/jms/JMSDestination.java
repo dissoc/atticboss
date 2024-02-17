@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.codecs.Codec;
-import org.projectodd.wunderboss.codecs.Codecs;
-import org.projectodd.wunderboss.messaging.Context;
-import org.projectodd.wunderboss.messaging.Destination;
-import org.projectodd.wunderboss.messaging.Listener;
-import org.projectodd.wunderboss.messaging.Message;
-import org.projectodd.wunderboss.messaging.MessageHandler;
-import org.projectodd.wunderboss.messaging.Messaging;
-import org.projectodd.wunderboss.messaging.Reply;
-import org.projectodd.wunderboss.messaging.WithCloseables;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.codecs.Codec;
+import org.projectodd.atticboss.codecs.Codecs;
+import org.projectodd.atticboss.messaging.Context;
+import org.projectodd.atticboss.messaging.Destination;
+import org.projectodd.atticboss.messaging.Listener;
+import org.projectodd.atticboss.messaging.Message;
+import org.projectodd.atticboss.messaging.MessageHandler;
+import org.projectodd.atticboss.messaging.Messaging;
+import org.projectodd.atticboss.messaging.Reply;
+import org.projectodd.atticboss.messaging.WithCloseables;
 
 import javax.jms.BytesMessage;
 import javax.jms.DeliveryMode;

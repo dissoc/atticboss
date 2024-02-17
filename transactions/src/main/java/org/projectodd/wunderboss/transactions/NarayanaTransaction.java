@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.transactions;
+package org.projectodd.atticboss.transactions;
 
 import org.jboss.logging.Logger;
-import org.projectodd.wunderboss.Options;
+import org.projectodd.atticboss.Options;
 
 import javax.transaction.TransactionManager;
 import java.util.concurrent.Callable;

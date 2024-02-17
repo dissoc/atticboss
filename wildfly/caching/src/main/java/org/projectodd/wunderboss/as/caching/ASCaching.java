@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.caching;
+package org.projectodd.atticboss.as.caching;
 
 import org.infinispan.Cache;
 import org.infinispan.configuration.global.GlobalConfiguration;
@@ -22,15 +22,15 @@ import org.infinispan.configuration.global.GlobalConfigurationBuilder;
 import org.infinispan.manager.EmbeddedCacheManager;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.ASUtils;
-import org.projectodd.wunderboss.caching.InfinispanCaching;
-import org.projectodd.wunderboss.caching.Encoder6;
-import org.projectodd.wunderboss.caching.Encoder8;
-import org.projectodd.wunderboss.caching.Config;
-import org.projectodd.wunderboss.caching.KeyEquivalenceCache;
-import org.projectodd.wunderboss.codecs.Codec;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.ASUtils;
+import org.projectodd.atticboss.caching.InfinispanCaching;
+import org.projectodd.atticboss.caching.Encoder6;
+import org.projectodd.atticboss.caching.Encoder8;
+import org.projectodd.atticboss.caching.Config;
+import org.projectodd.atticboss.caching.KeyEquivalenceCache;
+import org.projectodd.atticboss.codecs.Codec;
 
 import java.util.Map;
 
@@ -46,7 +46,7 @@ public class ASCaching extends InfinispanCaching {
             this.encoder = new Encoder6();
         }
         if (ASUtils.containerIsEAP6()) {
-            Config.className = "org.projectodd.wunderboss.caching.Config5";
+            Config.className = "org.projectodd.atticboss.caching.Config5";
         }
     }
 
@@ -74,7 +74,7 @@ public class ASCaching extends InfinispanCaching {
     }
 
     private EmbeddedCacheManager getWebCacheManager() {
-        ServiceRegistry serviceRegistry = (ServiceRegistry) WunderBoss.options().get("service-registry");
+        ServiceRegistry serviceRegistry = (ServiceRegistry) AtticBoss.options().get("service-registry");
         return (EmbeddedCacheManager) serviceRegistry.getRequiredService(WEB_CACHE_MANAGER).getValue();
     }
 

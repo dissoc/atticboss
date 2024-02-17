@@ -12,10 +12,10 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
-(ns wunderboss.config-test
+(ns attic.config-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.wunderboss.caching Caching$CreateOption Config]
-           org.projectodd.wunderboss.Options))
+  (:import [org.projectodd.atticboss.caching Caching$CreateOption Config]
+           org.projectodd.atticboss.Options))
 
 (deftest persistence
   (is (not (.. (Config/uration (Options.))

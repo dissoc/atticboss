@@ -12,15 +12,15 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
-(ns wunderboss.util
-  (:import [org.projectodd.wunderboss
-            DynamicClassLoader WunderBoss]))
+(ns atticboss.util
+  (:import [org.projectodd.atticboss
+            DynamicClassLoader Atticboss]))
 
 (defn at-exit [f]
-  (WunderBoss/addShutdownAction f))
+  (Atticboss/addShutdownAction f))
 
 (defn options []
-  (WunderBoss/options))
+  (Atticboss/options))
 
 (defn service-registry []
   (get (options) "service-registry"))
@@ -35,7 +35,7 @@
                                       (.addURL cl url)))]
 
            ;; if dynapath is available, make our classloader join the party
-           (extend org.projectodd.wunderboss.DynamicClassLoader
+           (extend org.projectodd.atticboss.DynamicClassLoader
              dp/DynamicClasspath
              base-url-classloader)
 
@@ -44,7 +44,7 @@
            ;; want the DynamicClassLoader to be used instead. Anything added
            ;; to the AppClassLoader won't be seen, since JBoss Modules is
            ;; between the ACL and the app.
-           (when (WunderBoss/inContainer)
+           (when (Atticboss/inContainer)
              (extend sun.misc.Launcher$AppClassLoader
                dp/DynamicClasspath
                (assoc base-url-classloader

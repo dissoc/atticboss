@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.clojure;
+package org.projectodd.atticboss.clojure;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.projectodd.wunderboss.Language;
-import org.projectodd.wunderboss.Utils;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.Language;
+import org.projectodd.atticboss.Utils;
+import org.projectodd.atticboss.AtticBoss;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
@@ -37,12 +37,12 @@ public class ClojureLanguageTest {
 
     @Before
     public void setUp() throws Exception {
-        WunderBoss.putOption("root", testApp);
+        AtticBoss.putOption("root", testApp);
         byte[] data = Files.readAllBytes(Paths.get(classpathFile));
         String cp = Charset.defaultCharset().decode(ByteBuffer.wrap(data)).toString();
-        WunderBoss.updateClassPath(Utils.classpathStringToURLS(cp));
+        AtticBoss.updateClassPath(Utils.classpathStringToURLS(cp));
 
-        clojure = WunderBoss.findLanguage("clojure");
+        clojure = AtticBoss.findLanguage("clojure");
     }
 
     @Test

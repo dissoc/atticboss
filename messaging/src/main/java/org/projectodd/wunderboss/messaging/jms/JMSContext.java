@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
 import org.jboss.logging.Logger;
-import org.projectodd.wunderboss.messaging.Messaging;
-import org.projectodd.wunderboss.messaging.WithCloseables;
+import org.projectodd.atticboss.messaging.Messaging;
+import org.projectodd.atticboss.messaging.WithCloseables;
 
 import javax.jms.Connection;
 import javax.jms.JMSException;

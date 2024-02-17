@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async;
+package org.projectodd.atticboss.web.async;
 
 import org.jboss.logging.Logger;
 
@@ -67,7 +67,7 @@ public class ServletHttpChannel extends OutputStreamHttpChannel {
     public boolean asyncSendSupported() {
         return this.asyncSupported;
     }
-    
+
     @Override
     protected String getResponseCharset() {
         return this.response.getCharacterEncoding();
@@ -126,5 +126,5 @@ public class ServletHttpChannel extends OutputStreamHttpChannel {
     private long timeout = 0;
     private AsyncContext asyncContext;
 
-    private static final Logger log = Logger.getLogger("org.projectodd.wunderboss.web.async");
+    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.web.async");
 }

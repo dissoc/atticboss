@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.messaging.Messaging;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.messaging.Messaging;
 
 import javax.jms.Connection;
 import javax.jms.JMSException;
@@ -53,7 +53,7 @@ public class JMSXAContext extends JMSContext implements Synchronization {
     public boolean enlist() throws Exception {
         if (TransactionUtil.tm.getTransaction() == null) {
             return super.isXAEnabled();
-        } else if (!WunderBoss.inContainer() ||
+        } else if (!AtticBoss.inContainer() ||
                     isRemote()) {
             XAResource resource = ((XASession)jmsSession()).getXAResource();
             return TransactionUtil.tm.getTransaction().enlistResource(resource);

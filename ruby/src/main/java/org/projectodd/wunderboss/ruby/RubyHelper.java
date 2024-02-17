@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.ruby;
+package org.projectodd.atticboss.ruby;
 
 import org.jcodings.specific.USASCIIEncoding;
 import org.jruby.Ruby;
@@ -24,7 +24,7 @@ import org.jruby.RubyString;
 import org.jruby.javasupport.JavaEmbedUtils;
 import org.jruby.runtime.builtin.IRubyObject;
 import org.jruby.util.ByteList;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.AtticBoss;
 import org.slf4j.Logger;
 
 import java.util.Map;
@@ -213,6 +213,5 @@ public class RubyHelper {
         return RubyString.newUnicodeString(runtime, string);
     }
 
-    private static final Logger log = WunderBoss.logger(RubyHelper.class);
+    private static final Logger log = AtticBoss.logger(RubyHelper.class);
 }
-

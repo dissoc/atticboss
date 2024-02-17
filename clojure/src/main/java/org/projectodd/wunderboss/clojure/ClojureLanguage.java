@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.clojure;
+package org.projectodd.atticboss.clojure;
 
 import clojure.java.api.Clojure;
 import clojure.lang.Compiler;
-import org.projectodd.wunderboss.Language;
-import org.projectodd.wunderboss.LoaderWrapper;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.Language;
+import org.projectodd.atticboss.LoaderWrapper;
+import org.projectodd.atticboss.AtticBoss;
 
 import java.util.concurrent.Callable;
 
@@ -28,14 +28,14 @@ public class ClojureLanguage implements Language {
 
     @Override
     public void initialize() {
-        this.runtime = new LoaderWrapper(WunderBoss.classLoader());
+        this.runtime = new LoaderWrapper(AtticBoss.classLoader());
         // we have to touch Clojure.class so it will init clojure enough for
         // binding the loader's root to work. Without this, we'll NPE
         Clojure.var("clojure.core", "require");
         // we have to bind the loader for cases where the TCCL is the wrong
         // module inside WildFly (this happens for web requests). If LOADER isn't
         // bound, clojure.lang.RT will fall back to the TCCL.
-        Compiler.LOADER.bindRoot(WunderBoss.classLoader());
+        Compiler.LOADER.bindRoot(AtticBoss.classLoader());
     }
 
     @Override
@@ -50,7 +50,7 @@ public class ClojureLanguage implements Language {
             public Object call() throws Exception {
                 Clojure.var("clojure.core", "require")
                         .invoke(Clojure.var("clojure.core", "symbol")
-                                        .invoke("wunderboss.util"));
+                                        .invoke("atticboss.util"));
                 Clojure.var("clojure.core", "shutdown-agents").invoke();
 
                 return null;
@@ -82,5 +82,3 @@ public class ClojureLanguage implements Language {
 
     private LoaderWrapper runtime;
 }
-
-

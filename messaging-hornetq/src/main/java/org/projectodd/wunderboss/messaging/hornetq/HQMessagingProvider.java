@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.hornetq;
+package org.projectodd.atticboss.messaging.hornetq;
 
-import org.projectodd.wunderboss.ComponentProvider;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.messaging.Messaging;
+import org.projectodd.atticboss.ComponentProvider;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.messaging.Messaging;
 
 public class HQMessagingProvider implements ComponentProvider<Messaging> {
     @Override
@@ -26,4 +26,3 @@ public class HQMessagingProvider implements ComponentProvider<Messaging> {
         return new HQMessaging(name, opts);
     }
 }
-

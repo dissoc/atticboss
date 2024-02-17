@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as;
+package org.projectodd.atticboss.as;
 
 import org.jboss.modules.Module;
 import org.jboss.modules.ModuleClassLoader;
@@ -99,4 +99,3 @@ public class ModuleUtils {
     }
 
 }
-

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web;
+package org.projectodd.atticboss.web;
 
-import org.projectodd.wunderboss.Component;
-import org.projectodd.wunderboss.Option;
+import org.projectodd.atticboss.Component;
+import org.projectodd.atticboss.Option;
 
 import javax.servlet.Servlet;
 import java.util.Map;

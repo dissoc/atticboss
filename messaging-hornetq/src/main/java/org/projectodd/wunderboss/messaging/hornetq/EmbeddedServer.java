@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.hornetq;
+package org.projectodd.atticboss.messaging.hornetq;
 
 import org.hornetq.jms.server.JMSServerManager;
 import org.hornetq.jms.server.embedded.EmbeddedJMS;

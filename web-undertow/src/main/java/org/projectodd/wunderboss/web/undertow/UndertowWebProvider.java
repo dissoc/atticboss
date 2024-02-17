@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.undertow;
+package org.projectodd.atticboss.web.undertow;
 
-import org.projectodd.wunderboss.ComponentProvider;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.web.Web;
+import org.projectodd.atticboss.ComponentProvider;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.web.Web;
 
 public class UndertowWebProvider implements ComponentProvider<Web> {
 

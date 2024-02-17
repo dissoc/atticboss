@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.messaging.Context;
-import org.projectodd.wunderboss.messaging.Messaging;
+import org.projectodd.atticboss.messaging.Context;
+import org.projectodd.atticboss.messaging.Messaging;
 
 import javax.jms.Connection;
 import javax.jms.Session;

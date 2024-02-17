@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.codecs.Codecs;
-import org.projectodd.wunderboss.messaging.Context;
-import org.projectodd.wunderboss.messaging.Listener;
-import org.projectodd.wunderboss.messaging.MessageHandler;
-import org.projectodd.wunderboss.messaging.Messaging;
-import org.projectodd.wunderboss.messaging.Topic;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.codecs.Codecs;
+import org.projectodd.atticboss.messaging.Context;
+import org.projectodd.atticboss.messaging.Listener;
+import org.projectodd.atticboss.messaging.MessageHandler;
+import org.projectodd.atticboss.messaging.Messaging;
+import org.projectodd.atticboss.messaging.Topic;
 
 import javax.jms.Destination;
 import javax.jms.TopicSubscriber;

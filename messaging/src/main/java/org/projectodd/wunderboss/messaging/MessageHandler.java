@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging;
+package org.projectodd.atticboss.messaging;
 
 public interface MessageHandler {
     Reply onMessage(Message msg, Context context) throws Exception;

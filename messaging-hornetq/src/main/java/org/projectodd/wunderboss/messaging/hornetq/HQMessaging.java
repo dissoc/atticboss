@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.hornetq;
+package org.projectodd.atticboss.messaging.hornetq;
 
 import org.hornetq.api.core.TransportConfiguration;
 import org.hornetq.api.jms.HornetQJMSClient;
 import org.hornetq.api.jms.JMSFactoryType;
 import org.hornetq.jms.client.HornetQConnectionFactory;
 import org.hornetq.jms.server.JMSServerManager;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.messaging.jms.DestinationUtil;
-import org.projectodd.wunderboss.messaging.jms.JMSDestination;
-import org.projectodd.wunderboss.messaging.jms.JMSMessagingSkeleton;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.messaging.jms.DestinationUtil;
+import org.projectodd.atticboss.messaging.jms.JMSDestination;
+import org.projectodd.atticboss.messaging.jms.JMSMessagingSkeleton;
 import org.slf4j.Logger;
 
 import javax.jms.ConnectionFactory;
@@ -221,5 +221,5 @@ public class HQMessaging extends JMSMessagingSkeleton {
     protected boolean started = false;
     protected EmbeddedServer server;
 
-    private final static Logger log = WunderBoss.logger("org.projectodd.wunderboss.messaging.hornetq");
+    private final static Logger log = AtticBoss.logger("org.projectodd.atticboss.messaging.hornetq");
 }

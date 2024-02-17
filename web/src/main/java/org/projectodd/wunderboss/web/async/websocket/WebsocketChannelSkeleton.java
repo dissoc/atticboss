@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async.websocket;
+package org.projectodd.atticboss.web.async.websocket;
 
-import org.projectodd.wunderboss.web.async.WebsocketUtil;
+import org.projectodd.atticboss.web.async.WebsocketUtil;
 
 import java.io.IOException;
 import java.util.Map;

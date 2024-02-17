@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
-    <groupId>org.projectodd.wunderboss</groupId>
-    <artifactId>wunderboss</artifactId>
+    <groupId>org.projectodd.atticboss</groupId>
+    <artifactId>atticboss</artifactId>
     <version>0.13.2-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>wunderboss-web-undertow</artifactId>
-  <name>WunderBoss Undertow Web Module</name>
+  <artifactId>atticboss-web-undertow</artifactId>
+  <name>AtticBoss Undertow Web Module</name>
 
   <packaging>jar</packaging>
 
@@ -20,14 +20,14 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-core</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-core</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-web</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-web</artifactId>
       <version>${project.version}</version>
     </dependency>
 

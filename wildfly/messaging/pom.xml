@@ -2,22 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
-    <groupId>org.projectodd.wunderboss</groupId>
-    <artifactId>wunderboss-wildfly-parent</artifactId>
+    <groupId>org.projectodd.atticboss</groupId>
+    <artifactId>atticboss-wildfly-parent</artifactId>
     <version>0.13.2-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>wunderboss-wildfly-messaging</artifactId>
-  <name>WunderBoss WildFly/EAP Messaging Module</name>
+  <artifactId>atticboss-wildfly-messaging</artifactId>
+  <name>AtticBoss WildFly/EAP Messaging Module</name>
 
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-wildfly-core</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-wildfly-core</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
@@ -28,8 +28,8 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-messaging-hornetq</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-messaging-hornetq</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>

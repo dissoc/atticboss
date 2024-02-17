@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as;
+package org.projectodd.atticboss.as;
 
 import org.jboss.modules.Module;
 import org.jboss.msc.service.ServiceActivator;
@@ -42,12 +42,12 @@ public class CoreServiceActivator implements ServiceActivator {
             throw new ServiceRegistryException(e);
         }
 
-        WunderBossService service = new WunderBossService(deploymentName,
+        AtticBossService service = new AtticBossService(deploymentName,
                                                     serviceActivatorContext.getServiceRegistry(),
                                                     serviceActivatorContext.getServiceTarget(),
                                                     namingContext);
         serviceActivatorContext.getServiceTarget()
-                .addService(WunderBossService.serviceName(deploymentName), service)
+                .addService(AtticBossService.serviceName(deploymentName), service)
                 .setInitialMode(ServiceController.Mode.ACTIVE)
                 .install();
     }

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.web;
+package org.projectodd.atticboss.as.web;
 
 import org.jboss.logging.Logger;
-import org.projectodd.wunderboss.CompletableFuture;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.as.ActionConduit;
-import org.projectodd.wunderboss.web.Web;
+import org.projectodd.atticboss.CompletableFuture;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.as.ActionConduit;
+import org.projectodd.atticboss.web.Web;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
@@ -36,8 +36,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static org.projectodd.wunderboss.web.Web.RegisterOption.PATH;
-import static org.projectodd.wunderboss.web.Web.RegisterOption.SERVLET_NAME;
+import static org.projectodd.atticboss.web.Web.RegisterOption.PATH;
+import static org.projectodd.atticboss.web.Web.RegisterOption.SERVLET_NAME;
 
 public class ServletWeb implements Web<Servlet> {
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.singletons;
+package org.projectodd.atticboss.as.singletons;
 
 import org.jboss.msc.service.ServiceActivator;
 import org.jboss.msc.service.ServiceActivatorContext;
 import org.jboss.msc.service.ServiceRegistry;
 import org.jboss.msc.service.ServiceTarget;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.ec.DaemonContext;
-import org.projectodd.wunderboss.ec.ImmediateContext;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.ec.DaemonContext;
+import org.projectodd.atticboss.ec.ImmediateContext;
 
 public class SingletonsServiceActivator implements ServiceActivator {
     @Override
@@ -30,9 +30,9 @@ public class SingletonsServiceActivator implements ServiceActivator {
         final ServiceRegistry registry = serviceActivatorContext.getServiceRegistry();
         final ServiceTarget target = serviceActivatorContext.getServiceTarget();
 
-        WunderBoss.registerComponentProvider(ImmediateContext.class,
+        AtticBoss.registerComponentProvider(ImmediateContext.class,
                                              new ImmediateContextProvider(registry, target));
-        WunderBoss.registerComponentProvider(DaemonContext.class,
+        AtticBoss.registerComponentProvider(DaemonContext.class,
                                              new DaemonContextProvider(registry, target));
     }
 }

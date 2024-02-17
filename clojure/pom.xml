@@ -2,22 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
-    <groupId>org.projectodd.wunderboss</groupId>
-    <artifactId>wunderboss</artifactId>
+    <groupId>org.projectodd.atticboss</groupId>
+    <artifactId>atticboss</artifactId>
     <version>0.13.2-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>wunderboss-clojure</artifactId>
-  <name>WunderBoss Clojure Module</name>
+  <artifactId>atticboss-clojure</artifactId>
+  <name>AtticBoss Clojure Module</name>
 
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-core</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-core</artifactId>
       <version>${project.version}</version>
     </dependency>
 
@@ -59,7 +59,7 @@
             </goals>
             <configuration>
               <script>src/test/clojure/build/calc_classpaths.clj</script>
-              <args>${project.basedir}/src/test/resources/apps/basic ${project.basedir}/target/apps/basic target/wunderboss-clojure.jar</args>
+              <args>${project.basedir}/src/test/resources/apps/basic ${project.basedir}/target/apps/basic target/atticboss-clojure.jar</args>
             </configuration>
           </execution>
         </executions>

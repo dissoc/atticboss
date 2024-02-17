@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.messaging;
+package org.projectodd.atticboss.as.messaging;
 
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.value.Value;
-import org.projectodd.wunderboss.messaging.jms.JMSDestination;
+import org.projectodd.atticboss.messaging.jms.JMSDestination;
 
 import javax.jms.Queue;
 import javax.jms.Topic;
 
 public abstract class ASDestinationManager {
-    final static String TIMEOUT_PROP = "wunderboss.messaging.destination-availability-timeout";
+    final static String TIMEOUT_PROP = "atticboss.messaging.destination-availability-timeout";
 
     public ASDestinationManager(ServiceTarget target, ServiceName hqServiceName) {
         this.serviceTarget = target;

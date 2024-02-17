@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.caching;
+package org.projectodd.atticboss.caching;
 
-import org.projectodd.wunderboss.Options;
+import org.projectodd.atticboss.Options;
 
 
 public class Config5 extends Config {
@@ -37,6 +37,6 @@ public class Config5 extends Config {
         if (v instanceof String) {
             builder.loaders().addFileCacheStore().location(v.toString());
         }
-    }     
+    }
 
 }

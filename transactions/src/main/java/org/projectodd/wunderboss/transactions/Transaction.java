@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.transactions;
+package org.projectodd.atticboss.transactions;
 
-import org.projectodd.wunderboss.Component;
+import org.projectodd.atticboss.Component;
 import javax.transaction.TransactionManager;
 import java.util.concurrent.Callable;
 

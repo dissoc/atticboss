@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.messaging;
+package org.projectodd.atticboss.as.messaging;
 
-import org.projectodd.wunderboss.ComponentProvider;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.ASUtils;
-import org.projectodd.wunderboss.as.WunderBossService;
-import org.projectodd.wunderboss.as.messaging.eap.EAPDestinationManager;
-import org.projectodd.wunderboss.as.messaging.wildfly.WildFlyDestinationManager;
-import org.projectodd.wunderboss.messaging.Messaging;
+import org.projectodd.atticboss.ComponentProvider;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.ASUtils;
+import org.projectodd.atticboss.as.AtticBossService;
+import org.projectodd.atticboss.as.messaging.eap.EAPDestinationManager;
+import org.projectodd.atticboss.as.messaging.wildfly.WildFlyDestinationManager;
+import org.projectodd.atticboss.messaging.Messaging;
 
 public class ASMessagingProvider implements ComponentProvider<Messaging> {
 
     @Override
     public Messaging create(String name, Options options) {
-        final WunderBossService service = (WunderBossService)WunderBoss.options().get(WunderBossService.KEY);
+        final AtticBossService service = (AtticBossService)AtticBoss.options().get(AtticBossService.KEY);
         ASDestinationManager destManager;
 
         if (ASUtils.containerIsEAP6()) {

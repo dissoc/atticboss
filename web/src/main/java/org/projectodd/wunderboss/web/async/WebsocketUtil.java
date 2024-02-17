@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async;
+package org.projectodd.atticboss.web.async;
 
 import javax.websocket.MessageHandler;
 

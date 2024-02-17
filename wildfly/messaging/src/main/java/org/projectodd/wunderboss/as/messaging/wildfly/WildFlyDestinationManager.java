@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.messaging.wildfly;
+package org.projectodd.atticboss.as.messaging.wildfly;
 
 import org.jboss.msc.service.Service;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.value.Value;
-import org.projectodd.wunderboss.as.messaging.ASDestinationManager;
-import org.projectodd.wunderboss.as.ASUtils;
-import org.projectodd.wunderboss.messaging.jms.JMSDestination;
+import org.projectodd.atticboss.as.messaging.ASDestinationManager;
+import org.projectodd.atticboss.as.ASUtils;
+import org.projectodd.atticboss.messaging.jms.JMSDestination;
 
 import javax.jms.Queue;
 import javax.jms.Topic;

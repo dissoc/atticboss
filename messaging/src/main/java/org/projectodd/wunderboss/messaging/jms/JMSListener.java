@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
 import org.jboss.logging.Logger;
-import org.projectodd.wunderboss.codecs.Codecs;
-import org.projectodd.wunderboss.messaging.Destination;
-import org.projectodd.wunderboss.messaging.Listener;
-import org.projectodd.wunderboss.messaging.MessageHandler;
-import org.projectodd.wunderboss.messaging.WithCloseables;
+import org.projectodd.atticboss.codecs.Codecs;
+import org.projectodd.atticboss.messaging.Destination;
+import org.projectodd.atticboss.messaging.Listener;
+import org.projectodd.atticboss.messaging.MessageHandler;
+import org.projectodd.atticboss.messaging.WithCloseables;
 
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
@@ -101,7 +101,7 @@ public class JMSListener extends WithCloseables implements Listener, MessageList
 
     }
 
-    protected static final Logger log = Logger.getLogger("org.projectodd.wunderboss.messaging");
+    protected static final Logger log = Logger.getLogger("org.projectodd.atticboss.messaging");
     protected final MessageHandler handler;
     protected final Codecs codecs;
     protected final Destination endpoint;

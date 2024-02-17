@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.codecs.Codec;
-import org.projectodd.wunderboss.codecs.Codecs;
-import org.projectodd.wunderboss.messaging.ConcreteResponse;
-import org.projectodd.wunderboss.messaging.Context;
-import org.projectodd.wunderboss.messaging.Listener;
-import org.projectodd.wunderboss.messaging.Message;
-import org.projectodd.wunderboss.messaging.MessageHandler;
-import org.projectodd.wunderboss.messaging.Queue;
-import org.projectodd.wunderboss.messaging.Reply;
-import org.projectodd.wunderboss.messaging.ReplyableMessage;
-import org.projectodd.wunderboss.messaging.Response;
-import org.projectodd.wunderboss.messaging.ResponseRouter;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.codecs.Codec;
+import org.projectodd.atticboss.codecs.Codecs;
+import org.projectodd.atticboss.messaging.ConcreteResponse;
+import org.projectodd.atticboss.messaging.Context;
+import org.projectodd.atticboss.messaging.Listener;
+import org.projectodd.atticboss.messaging.Message;
+import org.projectodd.atticboss.messaging.MessageHandler;
+import org.projectodd.atticboss.messaging.Queue;
+import org.projectodd.atticboss.messaging.Reply;
+import org.projectodd.atticboss.messaging.ReplyableMessage;
+import org.projectodd.atticboss.messaging.Response;
+import org.projectodd.atticboss.messaging.ResponseRouter;
 
 import javax.jms.Destination;
 import java.util.HashMap;

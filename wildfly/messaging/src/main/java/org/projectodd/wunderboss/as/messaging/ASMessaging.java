@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.messaging;
+package org.projectodd.atticboss.as.messaging;
 
 import org.jboss.msc.service.ServiceController;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.ASUtils;
-import org.projectodd.wunderboss.as.WunderBossService;
-import org.projectodd.wunderboss.messaging.hornetq.HQMessaging;
-import org.projectodd.wunderboss.messaging.jms.DestinationUtil;
-import org.projectodd.wunderboss.messaging.jms.JMSDestination;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.ASUtils;
+import org.projectodd.atticboss.as.AtticBossService;
+import org.projectodd.atticboss.messaging.hornetq.HQMessaging;
+import org.projectodd.atticboss.messaging.jms.DestinationUtil;
+import org.projectodd.atticboss.messaging.jms.JMSDestination;
 import org.slf4j.Logger;
 
 import javax.jms.Queue;
@@ -33,7 +33,7 @@ import javax.naming.NamingException;
 
 public class ASMessaging extends HQMessaging {
 
-    public ASMessaging(String name, WunderBossService service,
+    public ASMessaging(String name, AtticBossService service,
                        ASDestinationManager destinationManager, Options<CreateOption> options) {
         super(name, options);
         this.mscService = service;
@@ -111,10 +111,10 @@ public class ASMessaging extends HQMessaging {
         }
     }
 
-    private final WunderBossService mscService;
+    private final AtticBossService mscService;
     private final Context context;
     private final ASDestinationManager destinationManager;
 
-    private final static Logger log = WunderBoss.logger("org.projectodd.wunderboss.as");
+    private final static Logger log = AtticBoss.logger("org.projectodd.atticboss.as");
 
 }

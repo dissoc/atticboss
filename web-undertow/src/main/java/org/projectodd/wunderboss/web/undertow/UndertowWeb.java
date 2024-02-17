@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.undertow;
+package org.projectodd.atticboss.web.undertow;
 
 import io.undertow.Handlers;
 import io.undertow.Undertow;
@@ -43,9 +43,9 @@ import io.undertow.servlet.api.ServletInfo;
 import io.undertow.servlet.util.ImmediateInstanceFactory;
 import io.undertow.util.Headers;
 import io.undertow.websockets.jsr.WebSocketDeploymentInfo;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.web.Web;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.web.Web;
 import org.slf4j.Logger;
 import org.xnio.OptionMap;
 import org.xnio.Xnio;
@@ -166,7 +166,7 @@ public class UndertowWeb implements Web<HttpHandler> {
         servletInfo.setAsyncSupported(true);
 
         final DeploymentInfo servletBuilder = Servlets.deployment()
-                .setClassLoader(WunderBoss.class.getClassLoader())
+                .setClassLoader(AtticBoss.class.getClassLoader())
                 .setContextPath("/".equals(context) ? "" : context)
                 // actually flush the response when we ask for it
                 .setIgnoreFlush(false)
@@ -236,7 +236,7 @@ public class UndertowWeb implements Web<HttpHandler> {
     protected HttpHandler wrapWithStaticHandler(HttpHandler baseHandler, String path) {
         // static path is given relative to application root
         if (!new File(path).isAbsolute()) {
-            path = WunderBoss.options().get("root", "").toString() + File.separator + path;
+            path = AtticBoss.options().get("root", "").toString() + File.separator + path;
         }
         if (!new File(path).exists()) {
             log.debug("Not adding static handler for nonexistent directory {}", path);
@@ -313,7 +313,7 @@ public class UndertowWeb implements Web<HttpHandler> {
     private boolean started;
     private Map<String, Runnable> contextRegistrar = new HashMap<>();
 
-    private static final Logger log = WunderBoss.logger(Web.class);
+    private static final Logger log = AtticBoss.logger(Web.class);
 
     public static class Pathology {
 

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.transactions;
+package org.projectodd.atticboss.as.transactions;
 
-import org.projectodd.wunderboss.ComponentProvider;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.transactions.Transaction;
+import org.projectodd.atticboss.ComponentProvider;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.transactions.Transaction;
 
 public class ASTransactionProvider implements ComponentProvider<Transaction> {
 

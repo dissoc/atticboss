@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async;
+package org.projectodd.atticboss.web.async;
 
-import org.projectodd.wunderboss.web.Attachments;
+import org.projectodd.atticboss.web.Attachments;
 
 import java.io.IOException;
 
@@ -28,7 +28,7 @@ public interface Channel extends Attachments {
     boolean isOpen();
 
     boolean send(Object message, boolean shouldClose, OnComplete callback) throws Exception;
-    
+
     void close() throws IOException;
 
     void setTimeout(long timeout);

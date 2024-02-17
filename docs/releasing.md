@@ -6,7 +6,7 @@ First, commit and push all changes.
 
 * Set up the release repo:
 
-    git remote add release git@github.com:projectodd/wunderboss-release.git
+    git remote add release git@github.com:projectodd/atticboss-release.git
 
 * Make sure the release repo is up-to-date and doesn't have the release tag:
 

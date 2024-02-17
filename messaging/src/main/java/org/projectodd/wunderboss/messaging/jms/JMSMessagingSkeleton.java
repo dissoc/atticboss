@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.messaging.Context;
-import org.projectodd.wunderboss.messaging.Messaging;
-import org.projectodd.wunderboss.messaging.Queue;
-import org.projectodd.wunderboss.messaging.Topic;
-import org.projectodd.wunderboss.messaging.WithCloseables;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.messaging.Context;
+import org.projectodd.atticboss.messaging.Messaging;
+import org.projectodd.atticboss.messaging.Queue;
+import org.projectodd.atticboss.messaging.Topic;
+import org.projectodd.atticboss.messaging.WithCloseables;
 import org.slf4j.Logger;
 
 import javax.jms.Connection;
@@ -286,7 +286,7 @@ public abstract class JMSMessagingSkeleton extends WithCloseables implements Mes
     private final Map<String, List<AutoCloseable>> closeablesForDestination = new HashMap<>();
     private final Set<String> createdDestinations = new HashSet<>();
 
-    private final static Logger log = WunderBoss.logger("org.projectodd.wunderboss.messaging.jms");
+    private final static Logger log = AtticBoss.logger("org.projectodd.atticboss.messaging.jms");
 
 
 }

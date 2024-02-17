@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.transactions;
+package org.projectodd.atticboss.as.transactions;
 
 import org.jboss.msc.service.ServiceActivator;
 import org.jboss.msc.service.ServiceActivatorContext;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.transactions.Transaction;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.transactions.Transaction;
 
 public class TransactionsServiceActivator implements ServiceActivator {
     @Override
     public void activate(ServiceActivatorContext serviceActivatorContext) {
-        WunderBoss.registerComponentProvider(Transaction.class, new ASTransactionProvider());
+        AtticBoss.registerComponentProvider(Transaction.class, new ASTransactionProvider());
     }
 }

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.ruby;
+package org.projectodd.atticboss.ruby;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.projectodd.wunderboss.Language;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.Language;
+import org.projectodd.atticboss.AtticBoss;
 
 import java.io.File;
 
@@ -32,8 +32,8 @@ public class RubyLanguageTest {
 
     @Before
     public void setUp() throws Exception {
-        WunderBoss.putOption("root", new File(testApp).getAbsolutePath());
-        ruby = WunderBoss.findLanguage("ruby");
+        AtticBoss.putOption("root", new File(testApp).getAbsolutePath());
+        ruby = AtticBoss.findLanguage("ruby");
     }
 
     @Test

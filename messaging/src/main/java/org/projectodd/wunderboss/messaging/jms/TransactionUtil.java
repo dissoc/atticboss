@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.messaging.jms;
+package org.projectodd.atticboss.messaging.jms;
 
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.AtticBoss;
 
 import javax.transaction.TransactionManager;
 import java.lang.reflect.Method;
@@ -35,9 +35,9 @@ public class TransactionUtil {
     static {
         TransactionManager found = null;
         try {
-            Class clazz = Class.forName("org.projectodd.wunderboss.transactions.Transaction");
+            Class clazz = Class.forName("org.projectodd.atticboss.transactions.Transaction");
             Method method = clazz.getDeclaredMethod("manager");
-            Object component = WunderBoss.findOrCreateComponent(clazz);
+            Object component = AtticBoss.findOrCreateComponent(clazz);
             found = (TransactionManager) method.invoke(component);
         } catch (Throwable ignored) {}
         tm = found;

@@ -2,50 +2,50 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
-    <groupId>org.projectodd.wunderboss</groupId>
-    <artifactId>wunderboss-wildfly-parent</artifactId>
+    <groupId>org.projectodd.atticboss</groupId>
+    <artifactId>atticboss-wildfly-parent</artifactId>
     <version>0.13.2-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>wunderboss-wildfly-caching</artifactId>
-  <name>WunderBoss WildFly/EAP Caching Module</name>
+  <artifactId>atticboss-wildfly-caching</artifactId>
+  <name>AtticBoss WildFly/EAP Caching Module</name>
 
   <packaging>jar</packaging>
-  
+
   <dependencies>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-wildfly-core</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-wildfly-core</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-caching</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-caching</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-caching-ispan5</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-caching-ispan5</artifactId>
       <version>${project.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.projectodd.wunderboss</groupId>
-          <artifactId>wunderboss-caching</artifactId>
+          <groupId>org.projectodd.atticboss</groupId>
+          <artifactId>atticboss-caching</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.projectodd.wunderboss</groupId>
-      <artifactId>wunderboss-caching-ispan8</artifactId>
+      <groupId>org.projectodd.atticboss</groupId>
+      <artifactId>atticboss-caching-ispan8</artifactId>
       <version>${project.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.projectodd.wunderboss</groupId>
-          <artifactId>wunderboss-caching</artifactId>
+          <groupId>org.projectodd.atticboss</groupId>
+          <artifactId>atticboss-caching</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.infinispan</groupId>

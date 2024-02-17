@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.undertow.async.websocket;
+package org.projectodd.atticboss.web.undertow.async.websocket;
 
 import io.undertow.server.HttpServerExchange;
 

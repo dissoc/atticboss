@@ -12,20 +12,20 @@
 ;; See the License for the specific language governing permissions and
 ;; limitations under the License.
 
-(ns wunderboss.transactions-test
+(ns atticboss.transactions-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.wunderboss WunderBoss Options]
-           [org.projectodd.wunderboss.caching Caching Caching$CreateOption]
-           [org.projectodd.wunderboss.transactions Transaction]
-           [org.projectodd.wunderboss.codecs Codecs None]
-           [org.projectodd.wunderboss.messaging Messaging Context
+  (:import [org.projectodd.atticboss Atticboss Options]
+           [org.projectodd.atticboss.caching Caching Caching$CreateOption]
+           [org.projectodd.atticboss.transactions Transaction]
+           [org.projectodd.atticboss.codecs Codecs None]
+           [org.projectodd.atticboss.messaging Messaging Context
             Destination$ReceiveOption Destination$MessageOpOption
             Messaging$CreateContextOption Messaging$CreateQueueOption]))
 
-(def tx (doto (WunderBoss/findOrCreateComponent Transaction) (.start)))
-(def msg (doto (WunderBoss/findOrCreateComponent Messaging) (.start)))
+(def tx (doto (Atticboss/findOrCreateComponent Transaction) (.start)))
+(def msg (doto (Atticboss/findOrCreateComponent Messaging) (.start)))
 
-(def cache (let [service (doto (WunderBoss/findOrCreateComponent Caching) (.start))
+(def cache (let [service (doto (Atticboss/findOrCreateComponent Caching) (.start))
                  options (Options. {Caching$CreateOption/TRANSACTIONAL true})]
              (.findOrCreate service "tx-test" options)))
 

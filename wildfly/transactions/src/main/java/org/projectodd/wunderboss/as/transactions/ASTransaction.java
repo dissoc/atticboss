@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.transactions;
+package org.projectodd.atticboss.as.transactions;
 
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
-import org.projectodd.wunderboss.Options;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.as.WunderBossService;
-import org.projectodd.wunderboss.transactions.NarayanaTransaction;
+import org.projectodd.atticboss.Options;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.as.AtticBossService;
+import org.projectodd.atticboss.transactions.NarayanaTransaction;
 
 import javax.transaction.TransactionManager;
 
@@ -41,7 +41,7 @@ public class ASTransaction extends NarayanaTransaction {
     }
 
     private TransactionManager getWildFlyTransactionManager() {
-        ServiceRegistry serviceRegistry = (ServiceRegistry) WunderBoss.options().get("service-registry");
+        ServiceRegistry serviceRegistry = (ServiceRegistry) AtticBoss.options().get("service-registry");
         return (TransactionManager) serviceRegistry.getRequiredService(TRANSACTION_MANAGER).getValue();
     }
 }

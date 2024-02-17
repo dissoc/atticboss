@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.undertow.async.websocket;
+package org.projectodd.atticboss.web.undertow.async.websocket;
 
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
@@ -30,7 +30,7 @@ import io.undertow.websockets.core.BufferedTextMessage;
 import io.undertow.websockets.core.CloseMessage;
 import io.undertow.websockets.core.WebSocketChannel;
 import io.undertow.websockets.spi.WebSocketHttpExchange;
-import org.projectodd.wunderboss.web.undertow.AttachableHttpHandler;
+import org.projectodd.atticboss.web.undertow.AttachableHttpHandler;
 import org.xnio.Buffers;
 import org.xnio.ChannelListener;
 import org.xnio.Pooled;

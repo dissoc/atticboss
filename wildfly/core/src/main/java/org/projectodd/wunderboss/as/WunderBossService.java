@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as;
+package org.projectodd.atticboss.as;
 
 import org.jboss.logging.Logger;
 import org.jboss.msc.service.Service;
@@ -24,31 +24,31 @@ import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.service.StartContext;
 import org.jboss.msc.service.StartException;
 import org.jboss.msc.service.StopContext;
-import org.projectodd.wunderboss.WunderBoss;
+import org.projectodd.atticboss.AtticBoss;
 
 import javax.naming.Context;
 
-public class WunderBossService implements Service<WunderBossService> {
-    public static final String KEY = "wunderboss-msc-service";
+public class AtticBossService implements Service<AtticBossService> {
+    public static final String KEY = "atticboss-msc-service";
 
     public static ServiceName parentServiceName(String deploymentName) {
         return ServiceName.JBOSS.append("deployment").append("unit").append(deploymentName);
     }
 
     public static ServiceName serviceName(String deploymentName) {
-        return parentServiceName(deploymentName).append("wunderboss");
+        return parentServiceName(deploymentName).append("atticboss");
     }
 
-    public WunderBossService(String deploymentName, ServiceRegistry registry, ServiceTarget serviceTarget, Context namingContext) {
+    public AtticBossService(String deploymentName, ServiceRegistry registry, ServiceTarget serviceTarget, Context namingContext) {
         this.deploymentName = deploymentName;
         this.serviceRegistry = registry;
         this.serviceTarget = serviceTarget;
         this.namingContext = namingContext;
 
         // TODO: Get rid of these options and just make them statics here
-        WunderBoss.putOption("deployment-name", this.deploymentName);
-        WunderBoss.putOption("service-registry", this.serviceRegistry);
-        WunderBoss.putOption(KEY, this);
+        AtticBoss.putOption("deployment-name", this.deploymentName);
+        AtticBoss.putOption("service-registry", this.serviceRegistry);
+        AtticBoss.putOption(KEY, this);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class WunderBossService implements Service<WunderBossService> {
     }
 
     @Override
-    public WunderBossService getValue() throws IllegalStateException, IllegalArgumentException {
+    public AtticBossService getValue() throws IllegalStateException, IllegalArgumentException {
         return this;
     }
 
@@ -81,5 +81,5 @@ public class WunderBossService implements Service<WunderBossService> {
     private final ServiceTarget serviceTarget;
     private final Context namingContext;
 
-    private static final Logger log = Logger.getLogger("org.projectodd.wunderboss.as");
+    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.as");
 }

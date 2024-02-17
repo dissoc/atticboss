@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.as.caching;
+package org.projectodd.atticboss.as.caching;
 
 import org.jboss.msc.service.ServiceActivator;
 import org.jboss.msc.service.ServiceActivatorContext;
-import org.projectodd.wunderboss.WunderBoss;
-import org.projectodd.wunderboss.caching.Caching;
+import org.projectodd.atticboss.AtticBoss;
+import org.projectodd.atticboss.caching.Caching;
 
 public class CachingServiceActivator implements ServiceActivator {
     @Override
     public void activate(ServiceActivatorContext serviceActivatorContext) {
-        WunderBoss.registerComponentProvider(Caching.class, new ASCachingProvider());
+        AtticBoss.registerComponentProvider(Caching.class, new ASCachingProvider());
     }
 }

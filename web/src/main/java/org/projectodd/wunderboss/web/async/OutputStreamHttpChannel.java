@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async;
+package org.projectodd.atticboss.web.async;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -189,7 +189,7 @@ public abstract class OutputStreamHttpChannel implements HttpChannel {
         }
 
         WebsocketUtil.notifyComplete(this, onComplete, ex);
-        
+
         // close after the first send on HEAD requests - see IMMUTANT-630
         if (this.headRequest) {
             this.closer.run();

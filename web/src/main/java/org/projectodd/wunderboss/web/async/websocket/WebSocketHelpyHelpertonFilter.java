@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.wunderboss.web.async.websocket;
+package org.projectodd.atticboss.web.async.websocket;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
