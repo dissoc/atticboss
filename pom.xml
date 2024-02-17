@@ -46,8 +46,8 @@
     <!-- <module>caching-ispan5</module> -->
     <!-- <module>caching-ispan6</module> -->
     <!-- <module>caching-ispan8</module> -->
-    <!-- <module>web</module> -->
-    <!-- <module>web-undertow</module> -->
+    <module>web</module>
+    <module>web-undertow</module>
     <!-- <module>transactions</module> -->
     <!-- <module>wildfly</module> -->
 

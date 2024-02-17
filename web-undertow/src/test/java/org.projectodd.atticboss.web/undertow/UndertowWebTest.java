@@ -17,7 +17,7 @@
 package org.projectodd.atticboss.web.undertow;
 
 import org.junit.Test;
-import org.projectodd.atticboss.WunderBoss;
+import org.projectodd.atticboss.AtticBoss;
 import org.projectodd.atticboss.web.Web;
 
 import static org.junit.Assert.assertNotNull;
@@ -27,7 +27,7 @@ public class UndertowWebTest {
 
     @Test
     public void testCanFindWebComponent() {
-        Web web = WunderBoss.findOrCreateComponent(Web.class);
+        Web web = AtticBoss.findOrCreateComponent(Web.class);
         assertNotNull(web);
         assertTrue(web instanceof UndertowWeb);
     }
