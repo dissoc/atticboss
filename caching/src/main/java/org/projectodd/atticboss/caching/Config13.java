@@ -42,6 +42,4 @@ public class Config13 extends Config {
             builder.persistence().addSingleFileStore().location(v.toString());
         }
     }
-
-//    static org.infinispan.commons.equivalence.Equivalence EQUIVALENCE = new Equivalence13();
 }

@@ -19,8 +19,8 @@ package org.projectodd.atticboss.caching;
 import org.infinispan.Cache;
 import org.projectodd.atticboss.codecs.Codec;
 
-class Encoder7 implements Encoder {
+class Encoder13 implements Encoder {
     public Cache encode(Cache cache, Codec codec) {
-        return new CacheWithCodec7(cache, codec);
+        return new CacheWithCodec13(cache, codec);
     }
 }

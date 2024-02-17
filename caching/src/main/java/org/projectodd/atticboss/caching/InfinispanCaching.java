@@ -126,7 +126,7 @@ public class InfinispanCaching implements Caching {
     private final String name;
     protected final Options options;
     protected EmbeddedCacheManager manager;
-    protected Encoder encoder = new Encoder7();
+    protected Encoder encoder = new Encoder13();
 
     protected static final Logger log = Logger.getLogger(Caching.class);
 }
