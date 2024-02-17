@@ -52,7 +52,7 @@
     <!-- <module>wildfly</module> -->
 
     <!-- <module>ruby</module> -->
-    <!-- <module>clojure</module> -->
+    <module>clojure</module>
   </modules>
 
   <properties>
