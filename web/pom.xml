@@ -16,7 +16,7 @@
 
   <properties>
     <version.javax-websocket>1.1.0.Final</version.javax-websocket>
-    <version.javax-servlet>1.0.0.Final</version.javax-servlet>
+    <version.jakarta.servlet>6.0.0</version.jakarta.servlet>
   </properties>
 
   <dependencies>
@@ -25,17 +25,16 @@
       <artifactId>atticboss-core</artifactId>
       <version>${project.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.jboss.spec.javax.websocket</groupId>
       <artifactId>jboss-websocket-api_1.1_spec</artifactId>
       <version>${version.javax-websocket}</version>
     </dependency>
-
     <dependency>
-      <groupId>org.jboss.spec.javax.servlet</groupId>
-      <artifactId>jboss-servlet-api_3.1_spec</artifactId>
-      <version>${version.javax-servlet}</version>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>${version.jakarta.servlet}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

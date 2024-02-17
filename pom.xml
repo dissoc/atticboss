@@ -40,19 +40,16 @@
   <modules>
     <module>core</module>
     <module>messaging</module>
+    <module>messaging-artemis</module>
     <!-- <module>messaging-hornetq</module> -->
     <module>scheduling</module>
     <module>caching</module>
-    <!-- <module>caching-ispan5</module> -->
-    <!-- <module>caching-ispan6</module> -->
-    <!-- <module>caching-ispan8</module> -->
     <module>web</module>
     <module>web-undertow</module>
     <!-- <module>transactions</module> -->
     <!-- <module>wildfly</module> -->
 
-    <!-- <module>ruby</module> -->
-    <module>clojure</module>
+        <module>clojure</module>
   </modules>
 
   <properties>
@@ -188,7 +185,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.5.1</version>
+        <version>2.3.2</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
