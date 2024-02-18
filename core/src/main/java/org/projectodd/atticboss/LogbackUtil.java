@@ -18,7 +18,7 @@ package org.projectodd.atticboss;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.util.ContextInitializer;
+import ch.qos.logback.classic.util.DefaultJoranConfigurator;
 import ch.qos.logback.core.joran.spi.JoranException;
 import org.slf4j.Logger;
 
@@ -34,12 +34,13 @@ public class LogbackUtil {
     public static void configureLogback(Object rawContext) {
         if (rawContext instanceof LoggerContext) {
             LoggerContext context = (LoggerContext)rawContext;
-            ContextInitializer initializer = new ContextInitializer(context);
-            if (initializer.findURLOfDefaultConfigurationFile(false) == null) {
+            DefaultJoranConfigurator configurator = new DefaultJoranConfigurator();
+            configurator.setContext(context);
+            if (configurator.findURLOfDefaultConfigurationFile(false) == null) {
                 context.reset();
                 URL defaultConfig = context.getClass().getClassLoader().getResource("logback-default.xml");
                 try {
-                    initializer.configureByResource(defaultConfig);
+                    configurator.configureByResource(defaultConfig);
                 } catch (JoranException e) {
                     throw new RuntimeException("Failed to load default logging configuration", e);
                 }
