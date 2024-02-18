@@ -14,13 +14,13 @@
 
 (ns atticboss.util
   (:import [org.projectodd.atticboss
-            DynamicClassLoader Atticboss]))
+            DynamicClassLoader AtticBoss]))
 
 (defn at-exit [f]
-  (Atticboss/addShutdownAction f))
+  (AtticBoss/addShutdownAction f))
 
 (defn options []
-  (Atticboss/options))
+  (AtticBoss/options))
 
 (defn service-registry []
   (get (options) "service-registry"))
@@ -44,7 +44,7 @@
            ;; want the DynamicClassLoader to be used instead. Anything added
            ;; to the AppClassLoader won't be seen, since JBoss Modules is
            ;; between the ACL and the app.
-           (when (Atticboss/inContainer)
+           (when (AtticBoss/inContainer)
              (extend sun.misc.Launcher$AppClassLoader
                dp/DynamicClasspath
                (assoc base-url-classloader
