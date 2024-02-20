@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as;
+package top.atticboss.as;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

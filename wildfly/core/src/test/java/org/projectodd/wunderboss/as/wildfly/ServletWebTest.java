@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.wildfly;
+package top.atticboss.as.wildfly;
 
 import org.junit.Test;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.web.ServletWeb;
-import org.projectodd.atticboss.as.web.ServletWebProvider;
-import org.projectodd.atticboss.web.Web;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.web.ServletWeb;
+import top.atticboss.as.web.ServletWebProvider;
+import top.atticboss.web.Web;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.singletons;
+package top.atticboss.as.singletons;
 
 import org.jboss.as.server.ServerEnvironment;
 import org.jboss.as.server.ServerEnvironmentService;
@@ -26,9 +26,9 @@ import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
 import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.value.InjectedValue;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.ASUtils;
-import org.projectodd.atticboss.as.ModuleUtils;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.ASUtils;
+import top.atticboss.as.ModuleUtils;
 import org.wildfly.clustering.singleton.SingletonElectionPolicy;
 import org.wildfly.clustering.singleton.SingletonServiceBuilderFactory;
 

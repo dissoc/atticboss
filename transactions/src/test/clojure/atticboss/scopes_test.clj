@@ -14,9 +14,9 @@
 
 (ns atticboss.scopes-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.atticboss AtticBoss Options]
-           [org.projectodd.atticboss.caching Caching Caching$CreateOption]
-           [org.projectodd.atticboss.transactions Transaction]))
+  (:import [top.atticboss AtticBoss Options]
+           [top.atticboss.caching Caching Caching$CreateOption]
+           [top.atticboss.transactions Transaction]))
 
 (def tx (doto (AtticBoss/findOrCreateComponent Transaction) (.start)))
 

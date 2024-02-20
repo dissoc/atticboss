@@ -14,8 +14,8 @@
 
 (ns atticboss.config-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.atticboss.caching Caching$CreateOption Config]
-           org.projectodd.atticboss.Options))
+  (:import [top.atticboss.caching Caching$CreateOption Config]
+           top.atticboss.Options))
 
 (deftest persistence
   (is (not (.. (Config/uration (Options.))

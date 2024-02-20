@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.caching;
+package top.atticboss.as.caching;
 
 import org.infinispan.Cache;
 import org.infinispan.configuration.global.GlobalConfiguration;
@@ -22,15 +22,15 @@ import org.infinispan.configuration.global.GlobalConfigurationBuilder;
 import org.infinispan.manager.EmbeddedCacheManager;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.ASUtils;
-import org.projectodd.atticboss.caching.InfinispanCaching;
-import org.projectodd.atticboss.caching.Encoder6;
-import org.projectodd.atticboss.caching.Encoder8;
-import org.projectodd.atticboss.caching.Config;
-import org.projectodd.atticboss.caching.KeyEquivalenceCache;
-import org.projectodd.atticboss.codecs.Codec;
+import top.atticboss.Options;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.ASUtils;
+import top.atticboss.caching.InfinispanCaching;
+import top.atticboss.caching.Encoder6;
+import top.atticboss.caching.Encoder8;
+import top.atticboss.caching.Config;
+import top.atticboss.caching.KeyEquivalenceCache;
+import top.atticboss.codecs.Codec;
 
 import java.util.Map;
 
@@ -46,7 +46,7 @@ public class ASCaching extends InfinispanCaching {
             this.encoder = new Encoder6();
         }
         if (ASUtils.containerIsEAP6()) {
-            Config.className = "org.projectodd.atticboss.caching.Config5";
+            Config.className = "top.atticboss.caching.Config5";
         }
     }
 

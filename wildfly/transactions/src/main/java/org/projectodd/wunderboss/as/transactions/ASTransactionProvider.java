@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.transactions;
+package top.atticboss.as.transactions;
 
-import org.projectodd.atticboss.ComponentProvider;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.transactions.Transaction;
+import top.atticboss.ComponentProvider;
+import top.atticboss.Options;
+import top.atticboss.transactions.Transaction;
 
 public class ASTransactionProvider implements ComponentProvider<Transaction> {
 

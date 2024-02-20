@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.singletons;
+package top.atticboss.as.singletons;
 
 import org.wildfly.clustering.group.Node;
 import org.wildfly.clustering.singleton.SingletonElectionPolicy;

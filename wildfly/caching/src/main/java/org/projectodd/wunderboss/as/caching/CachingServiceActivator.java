@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.caching;
+package top.atticboss.as.caching;
 
 import org.jboss.msc.service.ServiceActivator;
 import org.jboss.msc.service.ServiceActivatorContext;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.caching.Caching;
+import top.atticboss.AtticBoss;
+import top.atticboss.caching.Caching;
 
 public class CachingServiceActivator implements ServiceActivator {
     @Override

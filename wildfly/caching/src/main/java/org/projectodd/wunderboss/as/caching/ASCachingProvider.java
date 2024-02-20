@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.caching;
+package top.atticboss.as.caching;
 
-import org.projectodd.atticboss.ComponentProvider;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.caching.Caching;
+import top.atticboss.ComponentProvider;
+import top.atticboss.Options;
+import top.atticboss.caching.Caching;
 
 public class ASCachingProvider implements ComponentProvider<Caching> {
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as;
+package top.atticboss.as;
 
 import org.jboss.logging.Logger;
 import org.jboss.modules.Module;
-import org.projectodd.atticboss.ApplicationRunner;
-import org.projectodd.atticboss.CompletableFuture;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.web.ServletWebProvider;
-import org.projectodd.atticboss.web.Web;
+import top.atticboss.ApplicationRunner;
+import top.atticboss.CompletableFuture;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.web.ServletWebProvider;
+import top.atticboss.web.Web;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -204,5 +204,5 @@ public class ServletListener implements ServletContextListener {
 
     private ApplicationRunner applicationRunner;
 
-    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.wildfly");
+    private static final Logger log = Logger.getLogger("top.atticboss.wildfly");
 }

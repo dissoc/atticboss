@@ -14,11 +14,11 @@
 
 (ns atticboss.transactions-test
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.atticboss AtticBoss Options]
-           [org.projectodd.atticboss.caching Caching Caching$CreateOption]
-           [org.projectodd.atticboss.transactions Transaction]
-           [org.projectodd.atticboss.codecs Codecs None]
-           [org.projectodd.atticboss.messaging Messaging Context
+  (:import [top.atticboss AtticBoss Options]
+           [top.atticboss.caching Caching Caching$CreateOption]
+           [top.atticboss.transactions Transaction]
+           [top.atticboss.codecs Codecs None]
+           [top.atticboss.messaging Messaging Context
             Destination$ReceiveOption Destination$MessageOpOption
             Messaging$CreateContextOption Messaging$CreateQueueOption]))
 

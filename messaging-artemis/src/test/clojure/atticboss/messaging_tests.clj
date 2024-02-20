@@ -14,9 +14,9 @@
 
 (ns atticboss.messaging-tests
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.atticboss Option AtticBoss]
-           [org.projectodd.atticboss.codecs Codecs None StringCodec]
-           [org.projectodd.atticboss.messaging
+  (:import [top.atticboss Option AtticBoss]
+           [top.atticboss.codecs Codecs None StringCodec]
+           [top.atticboss.messaging
             Messaging
             Context Context$Mode
             ConcreteReply

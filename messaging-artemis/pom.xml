@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.projectodd.atticboss</groupId>
+    <groupId>top.atticboss</groupId>
     <artifactId>atticboss</artifactId>
-    <version>0.13.2-SNAPSHOT</version>
+    <version>0.14.0-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -22,7 +22,7 @@
   </licenses>
 
   <properties>
-    <version.atticboss>0.13.2-SNAPSHOT</version.atticboss>
+    <version.atticboss>0.14.0-SNAPSHOT</version.atticboss>
     <version.artemis>2.32.0</version.artemis>
     <version.clojure>1.11.1</version.clojure>
   </properties>
@@ -37,7 +37,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.projectodd.atticboss</groupId>
+      <groupId>top.atticboss</groupId>
       <artifactId>atticboss-messaging</artifactId>
       <version>${version.atticboss}</version>
     </dependency>

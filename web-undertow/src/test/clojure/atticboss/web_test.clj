@@ -14,11 +14,11 @@
 
 (ns atticboss.web-test
   (:require [clojure.test :refer :all])
-  (:import org.projectodd.atticboss.AtticBoss
-           org.projectodd.atticboss.Options
+  (:import top.atticboss.AtticBoss
+           top.atticboss.Options
            io.undertow.server.HttpHandler
-           org.projectodd.atticboss.web.Web
-           [org.projectodd.atticboss.web.undertow UndertowWeb UndertowWeb$Pathology]))
+           top.atticboss.web.Web
+           [top.atticboss.web.undertow UndertowWeb UndertowWeb$Pathology]))
 
 (def default (doto (AtticBoss/findOrCreateComponent Web) (.start)))
 

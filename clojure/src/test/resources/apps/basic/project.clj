@@ -20,5 +20,5 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  ;; we can't depend on this, or we'll get the version
                  ;; from .m2, not the version we're building
-                 ;;[org.projectodd.atticboss/atticboss-clojure "0.1.0-SNAPSHOT"]
+                 ;;[top.atticboss/atticboss-clojure "0.1.0-SNAPSHOT"]
                   ])

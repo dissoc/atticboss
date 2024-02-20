@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.transactions;
+package top.atticboss.as.transactions;
 
 import org.jboss.msc.service.ServiceActivator;
 import org.jboss.msc.service.ServiceActivatorContext;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.transactions.Transaction;
+import top.atticboss.AtticBoss;
+import top.atticboss.transactions.Transaction;
 
 public class TransactionsServiceActivator implements ServiceActivator {
     @Override

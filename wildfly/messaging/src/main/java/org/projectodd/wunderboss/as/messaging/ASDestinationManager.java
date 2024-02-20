@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.messaging;
+package top.atticboss.as.messaging;
 
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.value.Value;
-import org.projectodd.atticboss.messaging.jms.JMSDestination;
+import top.atticboss.messaging.jms.JMSDestination;
 
 import javax.jms.Queue;
 import javax.jms.Topic;

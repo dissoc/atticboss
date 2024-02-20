@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.transactions;
+package top.atticboss.as.transactions;
 
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.AtticBossService;
-import org.projectodd.atticboss.transactions.NarayanaTransaction;
+import top.atticboss.Options;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.AtticBossService;
+import top.atticboss.transactions.NarayanaTransaction;
 
 import javax.transaction.TransactionManager;
 

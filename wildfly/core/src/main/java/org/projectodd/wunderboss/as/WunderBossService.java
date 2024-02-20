@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as;
+package top.atticboss.as;
 
 import org.jboss.logging.Logger;
 import org.jboss.msc.service.Service;
@@ -24,7 +24,7 @@ import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.service.StartContext;
 import org.jboss.msc.service.StartException;
 import org.jboss.msc.service.StopContext;
-import org.projectodd.atticboss.AtticBoss;
+import top.atticboss.AtticBoss;
 
 import javax.naming.Context;
 
@@ -81,5 +81,5 @@ public class AtticBossService implements Service<AtticBossService> {
     private final ServiceTarget serviceTarget;
     private final Context namingContext;
 
-    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.as");
+    private static final Logger log = Logger.getLogger("top.atticboss.as");
 }

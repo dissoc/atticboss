@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.singletons;
+package top.atticboss.as.singletons;
 
 import org.jboss.msc.service.ServiceActivator;
 import org.jboss.msc.service.ServiceActivatorContext;
 import org.jboss.msc.service.ServiceRegistry;
 import org.jboss.msc.service.ServiceTarget;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.ec.DaemonContext;
-import org.projectodd.atticboss.ec.ImmediateContext;
+import top.atticboss.AtticBoss;
+import top.atticboss.ec.DaemonContext;
+import top.atticboss.ec.ImmediateContext;
 
 public class SingletonsServiceActivator implements ServiceActivator {
     @Override

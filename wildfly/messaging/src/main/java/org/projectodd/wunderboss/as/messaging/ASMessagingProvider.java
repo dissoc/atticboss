@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.messaging;
+package top.atticboss.as.messaging;
 
-import org.projectodd.atticboss.ComponentProvider;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.ASUtils;
-import org.projectodd.atticboss.as.AtticBossService;
-import org.projectodd.atticboss.as.messaging.eap.EAPDestinationManager;
-import org.projectodd.atticboss.as.messaging.wildfly.WildFlyDestinationManager;
-import org.projectodd.atticboss.messaging.Messaging;
+import top.atticboss.ComponentProvider;
+import top.atticboss.Options;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.ASUtils;
+import top.atticboss.as.AtticBossService;
+import top.atticboss.as.messaging.eap.EAPDestinationManager;
+import top.atticboss.as.messaging.wildfly.WildFlyDestinationManager;
+import top.atticboss.messaging.Messaging;
 
 public class ASMessagingProvider implements ComponentProvider<Messaging> {
 

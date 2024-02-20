@@ -14,8 +14,8 @@
 
 (ns atticboss.scheduling-tests
   (:require [clojure.test :refer :all])
-  (:import [org.projectodd.atticboss Option AtticBoss]
-           [org.projectodd.atticboss.scheduling Scheduling Scheduling$ScheduleOption]
+  (:import [top.atticboss Option AtticBoss]
+           [top.atticboss.scheduling Scheduling Scheduling$ScheduleOption]
            org.quartz.listeners.TriggerListenerSupport
            org.quartz.TriggerUtils
            java.util.Date))

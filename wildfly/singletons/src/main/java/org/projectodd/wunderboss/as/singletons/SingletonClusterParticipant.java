@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.singletons;
+package top.atticboss.as.singletons;
 
 import org.jboss.logging.Logger;
 import org.jboss.msc.service.Service;
 import org.jboss.msc.service.StartContext;
 import org.jboss.msc.service.StartException;
 import org.jboss.msc.service.StopContext;
-import org.projectodd.atticboss.ec.ClusterParticipant;
+import top.atticboss.ec.ClusterParticipant;
 
 public class SingletonClusterParticipant implements ClusterParticipant, Service<Void> {
 

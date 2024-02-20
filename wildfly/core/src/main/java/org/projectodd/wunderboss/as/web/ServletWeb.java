@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.web;
+package top.atticboss.as.web;
 
 import org.jboss.logging.Logger;
-import org.projectodd.atticboss.CompletableFuture;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.as.ActionConduit;
-import org.projectodd.atticboss.web.Web;
+import top.atticboss.CompletableFuture;
+import top.atticboss.Options;
+import top.atticboss.as.ActionConduit;
+import top.atticboss.web.Web;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
@@ -36,8 +36,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static org.projectodd.atticboss.web.Web.RegisterOption.PATH;
-import static org.projectodd.atticboss.web.Web.RegisterOption.SERVLET_NAME;
+import static top.atticboss.web.Web.RegisterOption.PATH;
+import static top.atticboss.web.Web.RegisterOption.SERVLET_NAME;
 
 public class ServletWeb implements Web<Servlet> {
 

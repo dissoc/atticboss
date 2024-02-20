@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as;
+package top.atticboss.as;
 
 import org.jboss.modules.Module;
 import org.jboss.msc.service.ServiceActivator;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as;
+package top.atticboss.as;
 
 import org.jboss.logging.Logger;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceRegistry;
-import org.projectodd.atticboss.AtticBoss;
+import top.atticboss.AtticBoss;
 
 import javax.management.MBeanException;
 import javax.management.MBeanServer;
@@ -235,7 +235,7 @@ public class ASUtils {
         return removed;
     }
 
-    private static final Logger log = Logger.getLogger("org.projectodd.atticboss.as");
+    private static final Logger log = Logger.getLogger("top.atticboss.as");
 
     static {
         final String swarmVersion = System.getProperty("wildfly.swarm.version");

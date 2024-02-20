@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.messaging;
+package top.atticboss.as.messaging;
 
 import org.jboss.msc.service.ServiceController;
-import org.projectodd.atticboss.Options;
-import org.projectodd.atticboss.AtticBoss;
-import org.projectodd.atticboss.as.ASUtils;
-import org.projectodd.atticboss.as.AtticBossService;
-import org.projectodd.atticboss.messaging.hornetq.HQMessaging;
-import org.projectodd.atticboss.messaging.jms.DestinationUtil;
-import org.projectodd.atticboss.messaging.jms.JMSDestination;
+import top.atticboss.Options;
+import top.atticboss.AtticBoss;
+import top.atticboss.as.ASUtils;
+import top.atticboss.as.AtticBossService;
+import top.atticboss.messaging.hornetq.HQMessaging;
+import top.atticboss.messaging.jms.DestinationUtil;
+import top.atticboss.messaging.jms.JMSDestination;
 import org.slf4j.Logger;
 
 import javax.jms.Queue;
@@ -115,6 +115,6 @@ public class ASMessaging extends HQMessaging {
     private final Context context;
     private final ASDestinationManager destinationManager;
 
-    private final static Logger log = AtticBoss.logger("org.projectodd.atticboss.as");
+    private final static Logger log = AtticBoss.logger("top.atticboss.as");
 
 }

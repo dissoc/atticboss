@@ -13,7 +13,7 @@
 ;; limitations under the License.
 
 (ns atticboss.util
-  (:import [org.projectodd.atticboss
+  (:import [top.atticboss
             DynamicClassLoader AtticBoss]))
 
 (defn at-exit [f]
@@ -35,7 +35,7 @@
                                       (.addURL cl url)))]
 
            ;; if dynapath is available, make our classloader join the party
-           (extend org.projectodd.atticboss.DynamicClassLoader
+           (extend top.atticboss.DynamicClassLoader
              dp/DynamicClasspath
              base-url-classloader)
 

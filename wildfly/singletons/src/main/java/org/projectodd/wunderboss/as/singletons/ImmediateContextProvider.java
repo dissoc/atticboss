@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.projectodd.atticboss.as.singletons;
+package top.atticboss.as.singletons;
 
 import org.jboss.msc.service.Service;
 import org.jboss.msc.service.ServiceRegistry;
 import org.jboss.msc.service.ServiceTarget;
-import org.projectodd.atticboss.as.ASUtils;
-import org.projectodd.atticboss.ec.AlwaysMasterClusterParticipant;
-import org.projectodd.atticboss.ec.ClusterParticipant;
+import top.atticboss.as.ASUtils;
+import top.atticboss.ec.AlwaysMasterClusterParticipant;
+import top.atticboss.ec.ClusterParticipant;
 
-public class ImmediateContextProvider extends org.projectodd.atticboss.ec.ImmediateContextProvider {
+public class ImmediateContextProvider extends top.atticboss.ec.ImmediateContextProvider {
     public ImmediateContextProvider(final ServiceRegistry registry, final ServiceTarget target) {
         this.registry = registry;
         this.target = target;

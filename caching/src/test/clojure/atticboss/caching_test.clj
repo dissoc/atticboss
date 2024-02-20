@@ -14,9 +14,9 @@
 
 (ns atticboss.caching-test
   (:require [clojure.test :refer :all])
-  (:import org.projectodd.atticboss.AtticBoss
-           [org.projectodd.atticboss.caching Caching Caching$CreateOption Config]
-           org.projectodd.atticboss.Options
+  (:import top.atticboss.AtticBoss
+           [top.atticboss.caching Caching Caching$CreateOption Config]
+           top.atticboss.Options
            org.infinispan.configuration.cache.CacheMode
            java.util.Arrays))
 
