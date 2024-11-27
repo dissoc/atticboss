@@ -1,0 +1,10 @@
+#+TITLE:     atticboss
+#+KEYWORDS:  clojure, java, wildfly, jboss
+#+LANGUAGE:  en
+
+atticboss to be used with cloboss
+
+* building
+#+begin_src sh
+mvn install -s support/settings.xml
+#+end_src
